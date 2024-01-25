@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Employee = require('./model/employee')
+const { Ename, Eposition, Ecity } = require('./array');
 const app = express()
 mongoose.connect('mongodb://127.0.0.1:27017/employee');
 const port = 3000
@@ -21,13 +22,6 @@ app.get('/', (req, res) => {
 app.get('/generate', async (req, res) => {
 
     await Employee.deleteMany({});
-    let Ename = ["Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack", "Katherine", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Rachel", "Samuel", "Taylor"];
-    
-    let Eposition = ["Software Engineer","Data Scientist","Web Developer","Network Engineer","System Administrator","Database Administrator","IT Project Manager","UI/UX Designer","Security Analyst","DevOps Engineer","QA Engineer","Business Analyst","IT Support Specialist","Network Administrator","Technical Writer","IT Consultant","Cloud Solutions Architect", "Machine Learning Engineer", "Cybersecurity Specialist", "IT Director",
-    ]
-
-    // let Elan = ["Python", "C++", "C", "Java"];
-    let Ecity = ["Bengluru", "Pune", "Nodia", "Gurugoan", "Mumbai", "Chennai", "Hydrebad"];
 
     for (i = 0; i < 10; i++) {
         let e = await Employee.create({
