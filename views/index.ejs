@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Random data Generator</title>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="main">
+            <h1>"Click the 'Generate' button to create a random employee table, or click the 'View' button to view
+                the results."</h1>
+        </div>
+        <div class="container">
+            <button type="button" class="btn generate">GENERATE</button>
+            <button type="button" class="btn show">VIEW</button>
+        </div>
+    </div>
+    <p class="date">Mini Project By Rohit Jangid</p>
+</body>
+<script>
+    const btn = document.getElementsByClassName('generate')[0];
+    btn.addEventListener('click', async () => {
+        let a = await fetch("/generate")
+        let r = await a.json();
+    });
+
+    const btn2 = document.getElementsByClassName('show')[0];
+    btn2.addEventListener('click', () => {
+        window.location.href = "/data";
+    });
+</script>
+
+</html>

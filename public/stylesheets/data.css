@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/bgg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 50px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th,
+td {
+    padding: 7px;
+    border: 1px solid #ddd;
+    text-align: center;
+    text-transform: capitalize;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: cadetblue;
+    color: antiquewhite;
+    font-size: x-large;
+    border-radius: 15px;
+
+}
+
+th {
+    background-color: #756969;
+    font-size: x-large;
+}
+p{
+    color: aliceblue;
+    font-size: large;
+}

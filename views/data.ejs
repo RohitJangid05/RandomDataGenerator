@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/data.css">
+    <title>Employees Data</title>
+</head>
+
+<body>
+    <h1>Random Employee Data Generator</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Language</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(data => { %>
+                <tr>
+                    <td><%= data.name %></td>
+                    <td><%= data.salary %></td>
+                    <td><%= data.language %></td>
+                    <td><%= data.city %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <p>"Note: Please refresh the page after clicking the 'Generate' button."</p>
+    <button type="button" class="btn generate">GENERATE</button>
+    <script>
+        const btn = document.querySelector('.generate');
+        btn.addEventListener('click', async () => {
+            let a = await fetch("/generate");
+            let r = await a.json();
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>

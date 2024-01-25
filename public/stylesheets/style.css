@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/bgg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    gap: 15px;
+}
+.main>h1{
+    color: aliceblue;
+    font-size: x-large;
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    background-color:cadetblue;
+    color: antiquewhite;
+    font-size: x-large;
+    border-radius: 15px;
+}
+.date{
+    color: aliceblue;
+    font-size: large;
+    position: relative;
+    top: 50px;
+    left: 650px;
+
+}
